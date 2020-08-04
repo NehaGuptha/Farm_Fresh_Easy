@@ -23,11 +23,11 @@ class account extends State<Account_Screen> {
       if (user != null) {
         loggedinUser = user;
         print(loggedinUser.email);
-        if(loggedinUser.email == 'neha@gmail.com')
+        if(loggedinUser.email == data[email])
         {
-          email = 'neha@gmail.com';
-          mobnum = '9291233566';
-          username= 'Neha Guptha';
+          email = data[email];
+          mobnum = data[mobnum];
+          username= data[username];
 
         }
       }
@@ -38,7 +38,7 @@ class account extends State<Account_Screen> {
     }
   }
 
-  /*Future<dynamic> getData() async {
+  Future<dynamic> getData() async {
 
     final user = await _auth.currentUser();
     if (user != null) {
@@ -54,7 +54,7 @@ class account extends State<Account_Screen> {
     });
     print(data['mobnum']);
 
-  }*/
+  }
 
 
   @override
